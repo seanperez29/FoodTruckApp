@@ -34,8 +34,8 @@ class FoodTruck: NSObject, MKAnnotation {
     static func parseFoodTruckJSONData(data: Data) -> [FoodTruck] {
         var foodtrucks = [FoodTruck]()
         do {
-            let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-            if let trucks = jsonResult as? [[String:AnyObject]] {
+            let jsonResult = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String:AnyObject]]
+            if let trucks = jsonResult {
                 for truck in trucks {
                     let newTruck = FoodTruck()
                     newTruck.id = truck["_id"] as! String
