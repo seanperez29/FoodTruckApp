@@ -48,7 +48,7 @@ class DataService {
     //GET all reviews for a specific food truck
     func getAllReviews(for truck: FoodTruck) {
         let session = URLSession.shared
-        guard let url = URL(string: Constants.URLs.GET_ALL_REVIEWS_URL) else { return }
+        guard let url = URL(string: "\(Constants.URLs.GET_ALL_REVIEWS_URL)/\(truck.id)") else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -56,7 +56,7 @@ class DataService {
                 print(error!.localizedDescription)
                 return
             }
-            guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode >= 299 else {
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
                 print("Returned a status code other than 2xx!")
                 return
             }
@@ -70,7 +70,6 @@ class DataService {
         task.resume()
         session.finishTasksAndInvalidate()
     }
-    
     //POST add a new FoodTruck
     func addNewFoodTruck(_ name: String, foodtype: String, avgcost: Double, latitude: Double, longitude: Double, completionHandler: @escaping Constants.Callbacks.callback) {
         let json: [String:Any] = ["name": name, "foodtype": foodtype, "avgcost": avgcost, "geometry":["coordinate": ["lat": latitude, "long":longitude]]]
