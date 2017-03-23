@@ -12,9 +12,19 @@ class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        DataService.sharedInstance.getAllFoodTrucks()
+        DataService.sharedInstance.delegate = self
     }
 
 
+}
+
+extension MainVC: DataServiceDelegate {
+    func trucksLoaded() {
+        print(DataService.sharedInstance.foodTrucks)
+    }
+    func reviewsLoaded() {
+        
+    }
 }
 
