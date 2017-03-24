@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9120C6831E84A6AA00745AE3 /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120C6821E84A6AA00745AE3 /* GCDBlackBox.swift */; };
+		9120C6871E84A7AD00745AE3 /* FoodTruckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120C6861E84A7AD00745AE3 /* FoodTruckCell.swift */; };
 		91E4A4591E83804200F2EF97 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E4A4581E83804200F2EF97 /* AuthService.swift */; };
 		91FFA7011E8197BB00577410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFA7001E8197BB00577410 /* AppDelegate.swift */; };
 		91FFA7031E8197BB00577410 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FFA7021E8197BB00577410 /* MainVC.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9120C6821E84A6AA00745AE3 /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		9120C6861E84A7AD00745AE3 /* FoodTruckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTruckCell.swift; sourceTree = "<group>"; };
 		91E4A4581E83804200F2EF97 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		91FFA6FD1E8197BB00577410 /* FoodTruckApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruckApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FFA7001E8197BB00577410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			children = (
 				91FFA7291E81A4A600577410 /* DataService.swift */,
 				91E4A4581E83804200F2EF97 /* AuthService.swift */,
+				9120C6821E84A6AA00745AE3 /* GCDBlackBox.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			children = (
 				91FFA7041E8197BB00577410 /* Main.storyboard */,
 				91FFA7091E8197BB00577410 /* LaunchScreen.storyboard */,
+				9120C6861E84A7AD00745AE3 /* FoodTruckCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -256,10 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9120C6831E84A6AA00745AE3 /* GCDBlackBox.swift in Sources */,
 				91FFA7031E8197BB00577410 /* MainVC.swift in Sources */,
 				91FFA7281E81A12B00577410 /* Review.swift in Sources */,
 				91FFA7011E8197BB00577410 /* AppDelegate.swift in Sources */,
 				91FFA7261E819AD000577410 /* FoodTruck.swift in Sources */,
+				9120C6871E84A7AD00745AE3 /* FoodTruckCell.swift in Sources */,
 				91FFA72A1E81A4A600577410 /* DataService.swift in Sources */,
 				91FFA72C1E81A60000577410 /* Constants.swift in Sources */,
 				91E4A4591E83804200F2EF97 /* AuthService.swift in Sources */,
