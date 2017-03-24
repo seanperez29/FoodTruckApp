@@ -20,6 +20,15 @@ class Constants {
         static let GET_ALL_REVIEWS_URL = "\(BASE_API_URL)/reviews"
         static let POST_ADD_NEW_TRUCK = "\(BASE_API_URL)/foodtruck/add"
         static let POST_ADD_NEW_REVIEW = "\(BASE_API_URL)/foodtruck/review/add"
+        static let POST_REGISTER_ACCOUNT = "\(BASE_API_URL)/account/register"
+        static let POST_LOGIN_ACCOUNT = "\(BASE_API_URL)/account/login"
+    }
+    
+    struct Keys {
+        static let DEFAULTS_REGISTERED = "isRegistered"
+        static let DEFAULTS_AUTHENTICATED = "isAuthenticated"
+        static let DEFAULTS_EMAIL = "email"
+        static let DEFAULTS_TOKEN = "authToken"
     }
     
 }
